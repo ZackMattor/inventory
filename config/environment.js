@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'inventory',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    firebase: 'https://inventory-mg.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
