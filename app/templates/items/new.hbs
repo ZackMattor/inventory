@@ -11,7 +11,9 @@
       </div>
       <div class="form-group">
         <label for="image">Image</label>
-        {{input type="text" value=item.image class="form-control"}}
+        {{#view Ember.View contentBinding=item.image}}
+          {{view 'image-uploader'}}
+        {{/view}}
       </div>
       <div class="form-group">
         <button class="btn btn-primary" {{action "addItem"}}>Add Item</button>
