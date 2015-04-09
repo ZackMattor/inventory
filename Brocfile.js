@@ -20,5 +20,10 @@ var flatUIFonts = new Funnel('bower_components/flat-ui/dist/fonts', {
   destDir: '/fonts'
 });
 
+var faFonts = new Funnel('bower_components/fontawesome/fonts', {
+  srcDir: '/',
+  destDir: '/fonts'
+});
 
-module.exports = app.toTree([bootstrapFonts, flatUIFonts]);
+
+module.exports = app.toTree([bootstrapFonts, flatUIFonts, faFonts]);
