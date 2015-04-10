@@ -4,7 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'inventory',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
+    contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com",
+                             'img-src'    : "'self' data:" },
     firebase: 'https://inventory-mg.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',

@@ -1,5 +1,6 @@
 <div class="row">
   <div class="col-md-6">
+    <h5>New Item</h5>
     <form>
       <div class="form-group">
         <label for="name">Name</label>
@@ -11,13 +12,17 @@
       </div>
       <div class="form-group">
         <label for="image">Image</label>
-        {{#view Ember.View contentBinding=item.image}}
-          {{view 'image-uploader'}}
-        {{/view}}
+        {{view 'image-uploader' name="item.image" class="form-control"}}
       </div>
       <div class="form-group">
         <button class="btn btn-primary" {{action "addItem"}}>Add Item</button>
       </div>
     </form>
+  </div>
+  <div class="col-md-6 image-preview">
+    <h5>Image Preview</h5>
+    {{#if item.image}}
+      <img {{bind-attr src=item.image}} />
+    {{/if}}
   </div>
 </div>
