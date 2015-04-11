@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <table class="table table-bordered table-striped">
+    <table id="inventory" class="table table-bordered table-striped table-hover">
       <thead>
         <tr>
           <th>Name</th>
@@ -9,10 +9,12 @@
       </thead>
       <tbody>
         {{#each item in model}}
-          <tr>
-            <td>{{item.name}}</td>
-            <td>{{item.location}}</td>
-          </tr>
+          {{#link-to 'item' item tagName="tr"}}
+            <tr>
+              <td>{{item.name}}</td>
+              <td>{{item.location}}</td>
+            </tr>
+          {{/link-to}}
         {{/each}}
       </tbody>
     </table>

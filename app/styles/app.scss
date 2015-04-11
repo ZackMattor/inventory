@@ -5,9 +5,27 @@ html, body {
   margin: 20px;
 }
 
+body {
+  background: url('/img/paper_fibers.png');
+}
+
 .image-preview {
   img {
     width: 40%;
     margin: 0 auto;
+  }
+}
+
+table {
+  tr {
+    cursor: pointer;
+  }
+}
+
+table#inventory {
+  tr {
+    td:last-of-type {
+      width: 25%;
+    }
   }
 }
